@@ -53,3 +53,7 @@ footer {
 	font-style: 400;
 	text-align: center;
 }
+
+.field{
+	max-width: 55%;
+}
