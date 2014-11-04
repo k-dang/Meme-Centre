@@ -11,13 +11,19 @@
       <h2 style= "margin-top: 10px;" ><%= article.title %></h2>
       <h4><%= article.body %></h4>
 
+      <% if user_signed_in? %>
       <td><%= link_to 'Show', article_path(article) %></td>
       <td><%= link_to 'Edit', edit_article_path(article) %></td>
       <td><%= link_to 'Destroy', article_path(article),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% else %>
+      <% end %>
       <hr>
   </div>
   <% end %>
 
 <!-- <%= button_to "New article", new_article_path, :class => "btn btn-default", :method => :get %> -->
+<% if user_signed_in? %>
 <%= link_to 'New article', new_article_path, :class => "btn btn-default" %>
+<% else %>
+<% end %>
