@@ -4,3 +4,5 @@ built with Ruby on Rails
 
 Using the Gems:
 Devise
+PaperClip
+Maybe another file attachment 
