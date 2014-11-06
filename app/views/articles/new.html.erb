@@ -1,5 +1,5 @@
 <h1>New Article</h1>
-<%= form_for :article,:html => { :id => "form-horizontal" }, url: articles_path do |f| %>
+<%= form_for :article,:html => { :id => "form-horizontal", :multipart => "true" }, url: articles_path do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title, :class => "form-control" %>
@@ -9,7 +9,11 @@
     <%= f.label :body %><br>
     <%= f.text_area :body, :class => "form-control"%>
   </p>
- 
+
+  <p>
+    <%= f.file_field :photo %>
+  </p>
+
   <p>
     <%= f.submit :class => "btn btn-default" %>
   </p>

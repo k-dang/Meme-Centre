@@ -8,6 +8,7 @@
 
   <% @articles.each do |article| %>
   <div id = "articles">
+    <%= image_tag article.photo.url %>
       <h2 style= "margin-top: 10px;" ><%= article.title %></h2>
       <h4><%= article.body %></h4>
 
